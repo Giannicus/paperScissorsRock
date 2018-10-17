@@ -1,11 +1,12 @@
 # paperScissorsRock
 
-var userInput = ("Rock", "Paper", "Scissors");
+  var userInput = ("Rock");
 userInput = userInput.toLowerCase();
 
+
 function getComputerChoice() {
- Math.floor(Math.random() * 3);
-  switch (getComputerChoice) { 
+ var x = Math.floor(Math.random() * 3);
+  switch (x) { 
   case 0:
     return "rock";
   case 1:
@@ -17,33 +18,33 @@ function getComputerChoice() {
 
 function determineWinner (userChoice, computerChoice) {
   if (userChoice === computerChoice) {
-return "Game is a tie!";
-}
+		return "Game is a tie!";
+	}
   if (userChoice === "rock") {
-if (computerChoice === "paper") {
-return "The computer win!";
-} else {
-return "You win!";
-}
-}
-if (userChoice === "paper") {
-if (computerChoice === "scissors") {
-return "The computer wins!";
-} else {
-return "You win!";
-}
-}
-if (userChoice === "scissors") {
-if (computerChoice === "rock") {
-return "The computer wins!"
-} else {
-return "You win!";
-}
-}
+		if (computerChoice === "paper") {
+			return "The computer win!";
+		} else {
+			return "You win!";
+		}
+	}
+  if (userChoice === "paper") {
+    if (computerChoice === "scissors") {
+      return "The computer wins!";
+    } else {
+      return "You win!";
+    }
+  }
+  if (userChoice === "scissors") {
+    if (computerChoice === "rock") {
+      return "The computer wins!"
+    } else {
+      return "You win!";
+     }
+  }
 }
 function playGame() {
   var userChoice = userInput;
-  var computerChoice = getCompuerChoice();
+  var computerChoice = getComputerChoice();
   console.log("You threw: " + userChoice);
   console.log("The computer threw: " + computerChoice);
   console.log(determineWinner(userChoice, computerChoice));
